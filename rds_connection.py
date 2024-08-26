@@ -48,10 +48,10 @@ def connect_and_create_db():
             print("Failed to fetch credentials.")
 
         connection = mysql.connector.connect(
-            host='rds-mysql-dev.c5gs6yamcv34.us-east-1.rds.amazonaws.com',
+            host=DB_Endpoint,
             port=3306,
-            user=username,
-            password=password
+            user=DB_Username,
+            password=DB_Password
         )
 
         if connection.is_connected():
